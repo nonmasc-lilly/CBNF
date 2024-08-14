@@ -244,7 +244,8 @@ as usable enough to do so.
 <spec>        ::= [*(<rule> | <comment>)]
 <rule>        ::= <rule name> <ws> "::=" <ws> <operation> <comment> <nl>
 <rule name>   ::= "<" <idenchar> [*(<idenchar> | " ")] ">"
-<operation>   ::= <branch> | <terminal> | <macro>
+<operation>   ::= <branch> | <terminal> | <macro> | <concat>
+<concat>      ::= <operation> <ws> <operation>
 <branch>      ::= <operation> <ws> "|" <ws> <operation>
 <macro>       ::= (<group> | <repetition> | <optional>)
 <group>       ::= "(" <ws> <operation> <ws> ")"
@@ -265,7 +266,7 @@ as usable enough to do so.
 <hexrange>    ::= "$" *<hexdigit> "-" *<hexdigit>
 <binrange>    ::= "b$" *<bit> "-" <bit>
 <idenchar>    ::= $30-39 | $41-5A | $61-7A
-<ws>          ::= " " | $9
+<ws>          ::= *(" " | $9)
 <nl>          ::= $A
 ```
 

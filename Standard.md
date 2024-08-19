@@ -167,7 +167,7 @@ like so, these can be mapped as
 ->
 
 ```BNF
-<rule> ::= <a> <a> <a>
+<rule> ::= <a> <a> <a> | <a> <a> | <a>
 ```
 
 ```CBNF

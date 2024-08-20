@@ -1,6 +1,10 @@
 # Compact extended Backus Naur Form
 ## Lilly H. St Claire
 
+IMPORTANT: This is not the final version of
+CBNF, that is a complete version is currently
+in the works.
+
 ### Goal
 
 The goal of CBNF is to be an extension to
